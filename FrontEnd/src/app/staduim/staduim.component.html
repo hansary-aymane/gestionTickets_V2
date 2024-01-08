@@ -1,0 +1,35 @@
+<div class="container">
+    <div class = "row">
+      <div class ="col-md-3">
+        <ul *ngIf="villes" class="list-group">
+          <li [ngClass]= "v==currentVille?'active':''" *ngFor="let v of villes._embedded.villes" class="list-group-item clickable"
+          (click)="OnGetStadium(v)">
+            {{v.nom}}
+          </li>
+        </ul>
+      </div>
+      <div class ="col-md-9">
+        <div class = "panel panel-default">
+          <div class="panel-heading">Liste des Stades</div>
+          <div class = "panel-body">
+            <ul *ngIf="stadiums" class = "nav nav-pills ">
+              <li *ngFor="let st of stadiums._embedded.stadiums" [ngClass]= "st==currentStadium?'active':''" class="clickable">
+                <a (click)="OnGetSalle(st)">{{st.nom}}</a>
+              </li>
+            </ul>
+          </div>
+            <div class ="row" *ngIf="stadiumsalle">
+              <div>
+                <div class = "col-md-6">
+                  <div class="panel panel-default">
+                    <div class = "panel panel-heading">{{stadiumsalle.name}}</div>
+                    <div class = "panel-body" *ngIf="eventStadiumSalle">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <p>{{eventStadiumSalle._embedded.events.titre}}</p>
+                        </div>
+
+          </div>
+        </div>
+    </div>
+</div>

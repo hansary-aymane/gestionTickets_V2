@@ -33,7 +33,7 @@ public class CinemaRestController {
     public byte[] image(@PathVariable(name="id") int id) throws Exception{
         Film f = filmRepository.findById(id).get();
         String photoName=f.getPhoto();
-        File file = new File(System.getProperty("user.home")+"/OneDrive/Bureau/JEE Project/GestionTickets/movies/"+photoName);
+        File file = new File(System.getProperty("user.home")+"/OneDrive/Bureau/JEE Project/gestionTickets_V2/movies/"+photoName);
         Path path = Paths.get(file.toURI());
         return Files.readAllBytes(path);
     }
@@ -42,7 +42,7 @@ public class CinemaRestController {
     public byte[] imageEvent(@PathVariable(name="id") int id) throws Exception{
         Event e = eventRepository.findById(id).get();
         String photoName=e.getPhoto();
-        File file = new File(System.getProperty("user.home")+"/OneDrive/Bureau/JEE Project/GestionTickets/event/"+photoName);
+        File file = new File(System.getProperty("user.home")+"/OneDrive/Bureau/JEE Project/gestionTickets_V2/event/"+photoName);
         Path path = Paths.get(file.toURI());
         return Files.readAllBytes(path);
     }

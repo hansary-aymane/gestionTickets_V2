@@ -18,18 +18,24 @@
               </li>
             </ul>
           </div>
-            <div class ="row" *ngIf="stadiumsalle">
+          <div class ="row" *ngIf="salleEvent">
               <div>
                 <div class = "col-md-6">
                   <div class="panel panel-default">
-                    <div class = "panel panel-heading">{{stadiumsalle.name}}</div>
-                    <div class = "panel-body" *ngIf="eventStadiumSalle">
+                    <div class = "panel panel-heading">{{eventStadiumSalle.name}}</div>
+                    <!-- <div class = "panel-body" *ngIf="eventStadiumSalle">
                       <div class="row">
                         <div class="col-md-5">
                           <p>{{eventStadiumSalle._embedded.events.titre}}</p>
                         </div>
 
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+          </div>
           </div>
         </div>
+      </div>
     </div>
-</div>

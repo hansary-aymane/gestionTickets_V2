@@ -47,5 +47,4 @@ public class GestionTicketsApplication implements CommandLineRunner {
 		TheatreStadiumService.initEvent();
 		TheatreStadiumService.initTicketsEvent();
 	}
-
 }

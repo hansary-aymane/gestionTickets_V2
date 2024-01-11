@@ -13,6 +13,15 @@ const routes: Routes=[
     path: 'Staduim',
     component: StaduimComponent
   },
+  { 
+    path: '', 
+    redirectTo: '/cinema', 
+    pathMatch: 'full' 
+  },
+  { 
+    path: '**', 
+    redirectTo: '/cinema' 
+  },
 ]
 
 @NgModule({
